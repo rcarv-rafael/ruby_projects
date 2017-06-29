@@ -7,9 +7,9 @@ end
 Entao(/^eu terei uma resposta de "([^"]*)"$/) do |esperado|
   case esperado
   when 'sucesso'
-    raise 'Retorno divergente: #{a.response}' if !@busca_cep.success?
+    raise 'Retorno divergente: #{@busca_cep.response}' if !@busca_cep.success?
   when 'falha'
-    raise 'Retorno divergente: #{a.response}' if @busca_cep.success?
+    raise 'Retorno divergente: #{@busca_cep.response}' if @busca_cep.success?
   end
 end
 
