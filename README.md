@@ -59,4 +59,4 @@ na linha de comando dentro da pasta de cada projeto:
 
 Também podem ser executados pelo bat respectivo na pasta do projeto
 
-**Para visualizar o relatório html, basta abrí-lo na pasta respectiva de cada projeto**
+**Para visualizar o relatório html, basta abri-lo na pasta respectiva de cada projeto**
