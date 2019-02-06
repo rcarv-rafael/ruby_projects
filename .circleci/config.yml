@@ -11,5 +11,5 @@ jobs:
       - run: gem install bundler
       - run: bundle
       - run: cd  BackEnd
-      - run: cucumber --format html --out report.html
+      - run: ls
 
