@@ -7,9 +7,9 @@ jobs:
 
     steps:
       - checkout
-      - run: cd  BackEnd
       - run: gem list
       - run: gem install bundler
       - run: bundle
+      - run: cd  BackEnd
       - run: cucumber --format html --out report.html
 
