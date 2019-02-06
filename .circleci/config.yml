@@ -10,6 +10,9 @@ jobs:
       - run: gem list
       - run: gem install bundler
       - run: bundle
-      - run: cd BackEnd && cucumber --format html --out report.html
+      - run: cucumber --require features BackEnd/features/busca_cep.feature --format html --out report.html
+      - run: ls
+      - run: curl -T report.html ftp://files.000webhost.com:21/public_html -H 'authorization: Basic YmV0ZGV0ZXRpcHM6NTIzNjQ1'
+
 
 
