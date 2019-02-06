@@ -6,5 +6,6 @@ jobs:
 
     steps:
       - checkout
-      - run: mkdir test-reports
-      - run: ls
+      - run: cd  BackEnd
+      - run: cucumber --format html --out report.html
+
