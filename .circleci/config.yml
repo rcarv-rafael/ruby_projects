@@ -11,8 +11,12 @@ jobs:
       - run: gem install bundler
       - run: bundle
       - run: cucumber --require features BackEnd/features/busca_cep.feature --format html --out report.html
-      - run: ls
-      - run: curl -T report.html ftp://bettetetips:rcarv123654@files.000webhost.com:21/public_html
-
-
-
+      - run: 
+          name: Deploy Master Branch
+          command: |
+            sudo apt-get update
+            sudo apt-get -qq install git-ftp
+            echo "Deploying project ..."
+            echo $(git status)
+            git ftp init --init-if-not-exist --user "${FTP_USER}" --passwd "${FTP_PWD}" ${FTP_LOCATION}
+ 
