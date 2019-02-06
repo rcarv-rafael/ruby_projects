@@ -2,10 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: circleci/ruby:latest
+
 
     steps:
       - checkout
       - run: cd  BackEnd
+      - run: gem list
+      - run: gem install bundler
+      - run: bundle
       - run: cucumber --format html --out report.html
 
