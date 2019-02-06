@@ -10,6 +10,6 @@ jobs:
       - run: gem list
       - run: gem install bundler
       - run: bundle
-      - run: cd /BackEnd
-      - run: ls
+      - run: cd BackEnd && cucumber --format html --out report.html
+
 
