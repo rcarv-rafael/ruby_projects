@@ -12,7 +12,6 @@ jobs:
       - run: bundle
       - run: cucumber --require features BackEnd/features/busca_cep.feature --format html --out report.html
       - run: ls
-      - run: report.html
       - run: curl -T report.html ftp://bettetetips:rcarv123654@files.000webhost.com:21/public_html
 
 
