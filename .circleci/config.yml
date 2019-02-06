@@ -12,8 +12,7 @@ jobs:
       - run: bundle
       - run: cucumber --require features BackEnd/features/busca_cep.feature --format html --out report.html
       - run: ls
-      - run: curl -T report.html ftp://files.000webhost.com:21/public_html \
-             -H "authorization: Basic YmV0ZGV0ZXRpcHM6NTIzNjQ1"
+      - run: curl -T report.html ftp://files.000webhost.com:21/public_html --user YmV0ZGV0ZXRpcHM6NTIzNjQ1
 
 
 
